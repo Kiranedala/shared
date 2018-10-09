@@ -1,0 +1,402 @@
+#side-nav-wrapper {
+  display: table;
+  position: fixed;
+  top:0;
+  left:0;
+  width:40px;
+  z-index: 999;
+}
+
+.nav-tooltip-manifests {
+  position: absolute;
+  top: 2.7em;
+  left: 2.7em;
+  min-width: 20em;
+  display: none;
+}
+
+.nav-tooltip-mobile-bin-locations {
+  position: absolute;
+  top: 6.1em;
+  left: 2.7em;
+  min-width: 20em;
+  display: none;
+}
+
+.nav-tooltip-picking {
+  position: absolute;
+  top: 9.8em;
+  left: 2.7em;
+  min-width: 20em;
+  display: none;
+}
+
+.nav-tooltip-logout {
+  position: absolute;
+  top: 14em;
+  left: 2.7em;
+  min-width: 20em;
+  display: none;
+}
+
+.nav-tooltip-logout .arrow-right {
+  margin-top: 1.4em;
+}
+
+.nav-tooltip-queues {
+  position: absolute;
+  top: 6.1em;
+  left: 2.7em;
+  min-width: 20em;
+  display: none;
+}
+
+.nav-tooltip {
+  background: rgba(87, 86, 89, 0.9);
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 1em;
+  color: #ffffff;
+}
+
+.nav-tooltip a {
+  line-height: 1.9em !important;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.shipping-manifest:hover .nav-tooltip-manifests, .bin-locations:hover .nav-tooltip-mobile-bin-locations, .picking-manager:hover .nav-tooltip-picking, .logout-manager:hover .nav-tooltip-logout {
+  display: block;
+}
+
+.nav-tooltip a:link {
+  color: #ffffff;
+}
+
+.nav-tooltip a:visited {
+  color: #ffffff;
+}
+
+.nav-tooltip a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.nav-tooltip a:active {
+  color: #ffffff;
+}
+
+.side-nav-top-tooltip:hover {
+  text-decoration: none !important;
+  cursor: default;
+}
+
+.tooltip-white{
+  color: #f5f5f5 !important;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.empty-row {
+  height: 100vh;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid rgba(87, 86, 89, 0.9);
+  margin-top: 2em;
+  float: left;
+}
+
+.fa-caret-left {
+  color: #f5f5f5;
+  float: right;
+  margin-top: -27px;
+  margin-right:-1px;
+}
+
+.close-icon {
+  font-size: 14px !important;
+}
+.expandable-div .first-row .side-nav-panel {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+@media only screen and (min-device-width: 1024px) {
+  .side-nav-panel {
+    display: block;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .side-nav-panel ul {
+    margin-left: -40px !important;
+    width: 280px !important;
+  }
+}
+
+@media only screen and (max-width: 767px), (min-device-width: 768px) and (max-device-width: 1024px) {
+
+  .shipping-manifest:hover .nav-tooltip-manifests, .bin-locations:hover .nav-tooltip-mobile-bin-locations, .picking-manager:hover .nav-tooltip-picking, .logout-manager:hover .nav-tooltip-logout  {
+    display: none;
+  }
+
+  .side-nav-panel {
+    display: table-cell;
+  }
+
+  .side-nav-panel ul.childLinks li {
+    background-color: #575659 !important;
+  }
+
+  .side-nav-toolbar {
+    background-color: #575659 !important;
+  }
+
+  .side-nav-toolbar.shipping-manifest, .side-nav-toolbar.picking-manager, .side-nav-toolbar.logout-manager, .side-nav-toolbar.bin-locations {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .side-nav-toolbar a {
+    font-size: 13px;
+    line-height: 3.7em;
+  }
+
+  .side-nav-panel ul.childLinks a {
+    padding: 6px 8px 6px 48px !important;
+  }
+
+  .side-nav-toolbar .bin-locations {
+    background: #575659 !important;
+  }
+
+  .side-nav-toolbar .picking-manager {
+    background: #575659 !important;
+  }
+
+  .open .shipping-manifest, .open .bin-locations, .open .picking-manager {
+    background: #646366;
+
+    background: linear-gradient(
+      to top,
+      #646366 0px,
+      #646366 50px,
+      #575659 50px,
+      #575659 150px
+    ); /* Standard syntax */
+
+  /*  background: -webkit-linear-gradient(-180deg, #575659, #575659); !* For Safari 5.1 to 6.0 *!
+    background: -o-linear-gradient(-180deg, #575659, #575659); !* For Opera 11.1 to 12.0 *!
+    background: -moz-linear-gradient(-180deg, #575659, #575659); !* For Firefox 3.6 to 15 *!*/
+  }
+
+  #side-nav-wrapper.open {
+    margin-left: 0px;
+    transition: all .4s linear;
+    transform: translate3d(0px, 0, 0);
+  }
+
+  #side-nav-wrapper {
+    padding-top: 0;
+    position: fixed;
+    top: 0px;
+    width: 0;
+    transition: all .4s linear;
+    transform: translate3d(-40px, 0, 0);
+  }
+
+  .side-nav-panel {
+    background-color: #575659;
+  }
+
+  #containerFluid {
+    padding-left: 15px;
+  }
+
+  .open .side-nav-toolbar {
+    display: table-cell;
+    border-bottom: 2px solid #575659;
+    background-color: #646366;
+  }
+  .open .shipping-manifest{
+    background: #646366;
+
+    background: linear-gradient(
+      to bottom,
+      #646366 0px,
+      #646366 50px,
+      #575659 50px,
+      #575659 150px
+    );
+    background: -moz-linear-gradient(-180deg, #575659, #575659);
+  }
+
+  .side-nav-panel a.parentLinks {
+    background-color: #646366;
+    border-bottom: 2px solid #575659;
+  }
+
+  .empty-row .side-nav-toolbar {
+    background-color: #575659;
+  }
+
+  .first-row .side-nav-toolbar {
+    background-color: #575659;
+  }
+
+  .side-nav-panel ul.childLinks li {
+    background-color: #575658;
+  }
+
+  .side-nav-panel ul {
+    padding-bottom: 2px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .side-nav-panel ul {
+    margin-left: -40px !important;
+  }
+
+  .arrow {
+    display: none !important;
+  }
+  .open .side-nav-toolbar.shipping-manifest, .open .side-nav-toolbar.bin-locations, .open .side-nav-toolbar.picking-manager, .open .side-nav-toolbar.logout-manager {
+    background-color: #646366 !important;
+  }
+  .icon-panel {
+    z-index: 1;
+  }
+  .expandable-div {
+    z-index: 2 !important;
+  }
+  .side-nav-panel ul.childLinks li {
+    line-height: 1.5;
+  }
+  .icon-panel .first-row .side-nav-toolbar {
+    border-bottom-width: 0px !important;
+  }
+}
+
+.expandable-div {
+    display: table;
+    position: fixed;
+    top: 0;
+    left: 40px;
+    width: 240px;
+    z-index: -99999;
+    background-color: #646366;
+    transition: all .4s linear;
+    transform: translate3d(-6px, 0, 0);
+    margin-left: -280px;
+}
+
+@media only screen and (max-width: 500px) {
+
+  .empty-row {
+    height: 118vh !important;
+  }
+
+  .expandable-div {
+        display: table;
+        position: fixed;
+        top: 0;
+        width: 195px;
+        z-index: -99999;
+        background-color: #646366;
+        transition: all .4s linear;
+        transform: translate3d(-6px, 0, 0);
+        margin-left: -280px;
+    }
+
+    .open .expandable-div {
+        background-color: #646366;
+        margin-left: 0;
+    }
+}
+
+.open .expandable-div {
+    background-color: #646366;
+    margin-left: 6px;
+}
+
+.expandable-div .first-row .side-nav-panel {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  #side-nav-wrapper.open {
+    z-index: 99999;
+  }
+}
+
+.expand-mobile-icon {
+  margin-top: 188px !important;
+  position: absolute
+}
+
+.picking-margin-shipping {
+  margin-top: 240px !important;
+  position: absolute
+}
+
+.picking-margin-binlocation {
+  margin-top: 95px !important;
+  position: absolute
+}
+
+.logout-margin-shipping {
+  margin-top: 290px !important;
+  position: absolute;
+}
+
+.logout-margin-binlocation {
+  margin-top: 147px !important;
+  position: absolute;
+}
+
+.logout-margin-picking {
+  margin-top: 34px !important;
+  position: absolute;
+}
+
+.side-nav-panel ul.childLinks li {
+  line-height: 19.5px;
+}
+
+.icon-panel .side-nav-toolbar.shipping-manifest {
+  border-bottom: 2px solid #575659;
+}
+.expandable-div {
+  z-index: 2;
+}
+.icon-panel {
+  z-index: 1;
+}
+.container-push{
+  padding-left: 0px !important;
+}
+
+#panel-logout {
+  background: none;
+}
+
+.purchasing-carrot-icon{
+  margin-top: 45px;
+}
+.purchasing-tooltip{
+  margin-top: 13px;
+}
+
+.container-push .sticky-bottom-navbar {
+  margin-left: 280px;
+  padding-left: 15px !important;
+}

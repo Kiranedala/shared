@@ -1,0 +1,13 @@
+<div class="win-dropdown" tabindex="0" (click)="!disabled && (active = !active)" [ngClass]="{'active': active}">
+  <div class="select">
+    <span class="fa fa-caret-down"></span>
+    <input type="text" name="searchTerm" tabindex="-1" class="form-control"
+           [ngClass]="{'disabled': disabled}" readonly [disabled]="disabled" [id]="id" [value]="selectedValue[labelKey] || selectedValue">
+  </div>
+  <ul class="win-dropdown-menu" [ngClass]="{'text-center': contentCenter}">
+    <li (click)="changeValue(defaultValue)" *ngIf="defaultValue && defaultValue[labelKey].length > 0">{{defaultValue[labelKey]}}</li>
+    <li *ngFor="let option of options" (click)="changeValue(option)">
+      <span>{{option[labelKey] || option}}</span>
+    </li>
+  </ul>
+</div>

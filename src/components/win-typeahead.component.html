@@ -1,0 +1,8 @@
+<p-autoComplete #autocomplete id="id" [(ngModel)]="searchQuery" [field]="objectField" [suggestions]="results"
+                [placeholder]="placeholder" [minLength]="minLength" (completeMethod)="searchFn()"
+                (onKeyUp)="filterRequest($event)" (onFocus)="suggestionsOnFocus(autocomplete) && autocomplete.handleDropdownClick()"
+                (onSelect)="changeModel()" [disabled]="disabled">
+  <ng-template let-suggestion pTemplate="item">
+    {{suggestion[objectField]}} {{secondField ? suggestion[secondField] : ''}}
+  </ng-template>
+</p-autoComplete>

@@ -1,0 +1,12 @@
+<div class="win-sorter-parent">
+    <div class="win-sorter-text">
+        <a class="hover-hand" (click)="sort()">
+            <ng-content></ng-content>
+        </a>
+    </div>
+    <div class="win-sorter-icon">
+        <i *ngIf="isSortedAsc" class="fa fa-sort-asc hover-hand" (click)="sort()" aria-hidden="true"></i>
+        <i *ngIf="isSortedDesc" class="fa fa-sort-desc hover-hand" (click)="sort()" aria-hidden="true"></i>
+        <i *ngIf="!isSortedAsc && !isSortedDesc" class="fa fa-sort hover-hand" (click)="sort()" aria-hidden="true"></i>
+    </div>
+</div>

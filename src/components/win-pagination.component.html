@@ -1,0 +1,50 @@
+<nav [id]="id">
+  <div class="count-goto-page">
+    <div class="pull-left left page-size" *ngIf="showPageSize">
+      <span>Show: </span>
+      <a class="count win-blue mx-1" *ngFor="let pageSize of PAGE_SIZE_LIST"
+         (click)="changePageSize(pageSize, $event)" [ngClass]="{'selected-count': pageSize === currentPageSize}">
+        <label>{{pageSize}}</label>
+      </a>
+    </div>
+  </div>
+
+  <div class="pull-right pagination-links">
+    <ul class="pagination" [ngClass]="classMap">
+      <li class="pagination-first page-item"
+          [class.disabled]="currentPage === 1"
+          *ngIf="boundaryLinks">
+        <a class="page-link" href (click)="selectPage(1, $event)"
+           [innerHTML]="getText('first')"></a>
+      </li>
+
+      <li class="pagination-prev page-item"
+          *ngIf="directionLinks"
+          [class.disabled]="noPrevious()">
+        <a class="page-link" href (click)="selectPage(page - 1, $event)"
+           [innerHTML]="getText('previous')"></a>
+      </li>
+
+      <li class="page-details">
+        <label for="currentPage" class="current-page-label">
+          <input type="number" class="current-page" #cp [ngModel]="currentPage" (keydown)="validateValue($event)"
+                 (keydown.enter)="selectPage(cp.value, $event)" (focusout)="selectPage(cp.value, $event)"(keyup)="fieldWidth()" [attr.min]="1" [min]="1" [attr.max]="totalPages"
+                 [max]="totalPages" id="currentPage">
+          <span class="out-of">of {{totalPages}}</span>
+        </label>
+      </li>
+
+      <li class="pagination-next page-item"
+          *ngIf="directionLinks"
+          [class.disabled]="noNext()">
+        <a class="page-link" href (click)="selectPage(page + 1, $event)"
+           [innerHTML]="getText('next')"></a></li>
+
+      <li class="pagination-last page-item"
+          *ngIf="boundaryLinks"
+          [class.disabled]="currentPage === totalPages">
+        <a class="page-link" href (click)="selectPage(totalPages, $event)"
+           [innerHTML]="getText('last')"></a></li>
+    </ul>
+  </div>
+</nav>

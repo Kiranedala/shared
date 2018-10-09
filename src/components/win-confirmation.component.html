@@ -1,0 +1,24 @@
+<div class="win-confirmation-modal fade modal-second-level" [id]="id" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="win-confirmation-modal-dialog-content">
+            <div class="win-confirmation-modal-content">
+                <div class="win-confirmation-modal-body container">
+                    <div class="win-blue win-confirmation-title">{{title}}</div>
+
+                    <div class="win-confirmation-wrapper">
+                        <div class="win-confirmation-icon">
+                            <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                    <div class="win-confirmation-text">{{message}}</div>
+
+                    <div class="win-confirmation-wrapper">
+                        <button type="button" class="btn win-confirmation-btn-white background-blue" (click)="unconfirm()">{{button2}}</button>
+                        <button type="button" class="btn win-confirmation-btn-blue background-blue" (click)="confirm()">{{button1}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

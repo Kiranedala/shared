@@ -1,0 +1,98 @@
+<nav class="win-nav navbar navbar-alt navbar-expand-lg mb-4 py-0 pr-0">
+  <div class="navbar-header">
+    <a href="javascript:void(0)" id="mobile-open" class="mobile-open parentLinks" (click)="toggleSideNav()">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </a>
+  </div>
+  <h3 class="mobile-page-title" (click)="onClickTopBar()">{{pageName}}
+      <help-doc [url]="helpDocUrl"></help-doc>
+  </h3>
+  <div id="navbar-left" class="collapse navbar-collapse" style="left: 0px; top: 0px;" (click)="onClickTopBar()">
+    <div class="navbar-nav mr-auto">
+      <div class="win-logo navbar-brand ">
+        <span class="desktop-logo" width="100px"></span>
+      </div>
+    </div>
+
+    <div class="navbar-right navbar-alt-right">
+      <div class="dropdown">
+        <div class="setting-wrapper"></div>
+
+        <button id="dLabel" type="button" (click)="toggleSetting()">
+          <i class="fa fa-ellipsis-v  fa-fw"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <div id="setting" class="collapse dropdown-menu company-section" [ngClass]="isSettingOpen ? 'open' : ''">
+      <div id="setting-panel" class="carousel slide" data-ride="carousel" data-keyboard="false" data-interval="false">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item item active">
+            <div class="company-name win-label text-center">00054 - Bangor Winsupply</div>
+            <div class="win-command-section">
+              <div class="section-label">Win Commands</div>
+              <div class="win-label win-in-company" (click)="showCompanySelection(true)">WIN Into Company
+                  <i class="fa fa-angle-right pull-right" ></i>
+              </div>
+            </div>
+            <div class="display-setting-section">
+              <div class="section-label">Display Settings</div>
+              <label class="win-label">
+                <span class="enable-theme col-lg-4">Select Theme</span>
+                  <div class="right col-lg-8">
+                      <select class="form-control" (change)="setupTheme()" [(ngModel)]="selectedTheme">
+                          <option value="1">Modern Light</option>
+                          <option value="0">Modern Dark</option>
+                          <option value="2">High Contrast</option>
+                      </select>
+                  </div>
+              </label>
+            </div>
+          </div>
+          <div class="carousel-item item">
+              <div>
+                  <div class="company-name win-label text-center">
+                      <i class="fa fa-angle-left" (click)="showCompanySelection(false)"></i>
+                      <span>Companies</span>
+                  </div>
+                  <div>
+                      <div class="form-group company-selection">
+                          <label for="CompanySelection" class="company-selection-label">Company Selection</label>
+                          <input type="text" class="form-control validate filter-input" placeholder="Enter company number">
+                          <div class="select-btn-div">
+                            <button class="btn btn-md select-btn dark-ui-secondary-btn" type="button">Select</button>
+                          </div>
+                      </div>
+                          
+                  </div>
+              
+                  <div class="current-selection">
+                      <label for="current-company" class="recent-search" >Current Selection</label>
+                      <div class="selected-company">
+                          <span>00054 - Bangor Winsupply</span>
+                      </div>
+                  </div>
+              
+                  <div class="recent-search-div">
+                      <label for="recentsearch" class="recent-search" >Recent Searches</label>
+                      <div class="recent-searched-company">
+                          <span>00054 - Bangor Winsupply</span>
+                      </div>
+                      <div class="recent-searched-company">
+                          <span> 000040 - Winsupply Of Portland</span>
+                      </div>
+              
+                  </div>
+              
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</nav>

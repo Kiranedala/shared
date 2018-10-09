@@ -1,0 +1,213 @@
+<div class="side-nav-wrapper" id="side-nav-wrapper">
+
+  <div class="icon-panel">
+    <div class="table-row first-row">
+
+      <div class="side-nav-toolbar">
+        <a id="close" class="close-icon parentLinks" (click)="toggleSideNav()">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+        <a id="open" class="open-icon parentLinks" (click)="toggleSideNav()">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="table-row">
+      <div class="side-nav-toolbar shipping-manifest">
+        <a href="{{shippingManifestUrl}}#/manifest-dashboard" [ngClass]="{active: isActive=='1'}" (click)="isActive = '1'" id="toolbar-manifest" class="parentLinks">
+          <i class="fa fa-truck" aria-hidden="true"></i>
+        </a>
+
+        <div id="nav-tooltip-manifests" class="nav-tooltip-manifests" [class.hidden]="hideToolTip()" (click)="hideSetting()">
+          <div class="arrow-right" [style.display] = " hideTooltip ? 'none' : 'block'"></div>
+          <div class="nav-tooltip" [style.display] =  "hideTooltip ? 'none' : 'block'">
+            <div><a class="side-nav-top-tooltip tooltip-white">SHIPPING MANIFESTS</a></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<a class="side-nav-tooltip" [ngClass]="{active: isActive=='1'}" (click)="isActive = '1'" href="{{shippingManifestUrl}}#/manifest-dashboard">Today's Summary</a></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<a class="side-nav-tooltip" [ngClass]="{active: isActive=='2'}" (click)="isActive = '2'" href="{{shippingManifestUrl}}#/list">Manifests</a></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<a class="side-nav-tooltip" [ngClass]="{active: isActive=='3'}" (click)="isActive = '3'" href="{{shippingManifestUrl}}#/not-delivered-order-list">Not Delivered Orders</a></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<a class="side-nav-tooltip" [ngClass]="{active: isActive=='4'}" (click)="isActive = '4'" href="{{shippingManifestUrl}}#/delivered-order-list">Delivered Orders</a></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<a class="side-nav-tooltip" [ngClass]="{active: isActive=='5'}" (click)="isActive = '5'" href="{{shippingManifestUrl}}#/truck-list">Trucks</a></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<a class="side-nav-tooltip" [ngClass]="{active: isActive=='6'}" (click)="isActive = '6'" href="{{shippingManifestUrl}}#/driver-list">Drivers</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="table-row">
+        <div class="side-nav-toolbar bin-locations">
+          <a href="{{binLocationUrl}}#/zone-details" id="toolbar-mobile-bin-locations" class="parentLinks">
+            <i class="fa fa-inbox" aria-hidden="true"></i>
+          </a>
+          <div id="nav-tooltip-mobile-bin-location" class="nav-tooltip-mobile-bin-locations" [class.hidden]="hideToolTip()" (click)="hideSetting()">
+            <div class="arrow-right" [style.display] = " hideTooltip ? 'none' : 'block'"></div>
+            <div class="nav-tooltip" [style.display] = " hideTooltip ? 'none' : 'block'">
+              <div><a class="side-nav-top-tooltip tooltip-white">BIN LOCATIONS</a></div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<a class="side-nav-tooltip" [ngClass]="{active: isActive=='7'}" (click)="isActive = '7'" href="{{binLocationUrl}}#/itembin-details">Items & Bins</a></div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<a class="side-nav-tooltip" [ngClass]="{active: isActive=='8'}" (click)="isActive = '8'" href="{{binLocationUrl}}#/zone-details">Zones</a></div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<a class="side-nav-tooltip" [ngClass]="{active: isActive=='9'}" (click)="isActive = '9'" href="{{binLocationUrl}}#/receiver-document">Receiver Document</a></div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="table-row">
+      <div class="side-nav-toolbar picking-manager">
+        <a href="{{pickingUrl}}#/" id="toolbar-picking" class="parentLinks">
+          <i class="fa fa-dropbox" aria-hidden="true"></i>
+        </a>
+        <div id="nav-tooltip-picking" class="nav-tooltip-picking" [class.hidden]="hideToolTip()" (click)="hideSetting()">
+          <div class="arrow-right" [style.display] = " hideTooltip ? 'none' : 'block'"></div>
+          <div class="nav-tooltip" [style.display] =  "hideTooltip ? 'none' : 'block'">
+            <div><a class="side-nav-top-tooltip tooltip-white">Picking</a></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<a class="side-nav-tooltip" [ngClass]="{active: isActive=='10'}" (click)="isActive = '10'" href="{{pickingUrl}}#/picking-Settings">Settings</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="table-row">
+      <div class="side-nav-toolbar picking-manager pt-4">
+        <a href="{{purchasingUrl}}#/suggest-order" id="toolbar-picking" class="parentLinks">
+          <i class="fa fa-purchasing purchasing-icon"  style="font-family: 'winsupply-icons' !important;" aria-hidden="true"></i>
+        </a>
+        <div id="nav-tooltip-picking" class="nav-tooltip-picking pt-1 purchasing-carrot-icon" [class.hidden]="hideToolTip()" (click)="hideSetting()">
+          <div class="arrow-right" [style.display] = " hideTooltip ? 'none' : 'block'"></div>
+          <div class="nav-tooltip purchasing-tooltip" [style.display] =  "hideTooltip ? 'none' : 'block'">
+            <div><a class="side-nav-top-tooltip tooltip-white">Purchasing</a></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<a class="side-nav-tooltip" [ngClass]="{active: isActive=='12'}" (click)="isActive = '12'" href="{{purchasingUrl}}#/suggested-order-lander">Suggested-Order-Lander</a></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<a class="side-nav-tooltip" [ngClass]="{active: isActive=='13'}" (click)="isActive = '13'" href="{{purchasingUrl}}#/create-worksheet">Create Worksheet</a></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<a class="side-nav-tooltip" [ngClass]="{active: isActive=='14'}" (click)="isActive = '14'" href="{{purchasingUrl}}#/edit-worksheet">Edit Worksheet</a></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<a class="side-nav-tooltip" [ngClass]="{active: isActive=='15'}" (click)="isActive = '15'" href="{{purchasingUrl}}#/suggest-order">Suggest Order</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="table-row" *ngIf="logoutBaseUrl">
+      <div class="side-nav-toolbar logout-manager">
+        <a id="toolbar-logout" class="parentLinks" (click)="logout()" href="{{logoutBaseUrl ? logoutBaseUrl + 'pkmslogout?filename=login.html' : ''}}">
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
+        </a>
+        <div id="nav-tooltip-logout" class="nav-tooltip-logout" [class.hidden]="hideToolTip()" (click)="hideSetting()">
+          <div class="arrow-right" [style.display] = " hideTooltip ? 'none' : 'block'"></div>
+          <div class="nav-tooltip" [style.display] =  "hideTooltip ? 'none' : 'block'">
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<a class="side-nav-tooltip" [ngClass]="{active: isActive=='11'}" (click)="isActive = '11'; logout()" href="{{logoutBaseUrl ? logoutBaseUrl + 'pkmslogout?filename=login.html' : ''}}">Logout</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-row empty-row non-expandable-div-empty-row">
+        <div class="side-nav-toolbar"></div>
+    </div>
+  </div>
+
+  <div class="expandable-div">
+    <div class="table-row first-row">
+      <div class="side-nav-panel">
+        <a class="mobile-nav" [ngClass]="{active: isActive=='1'}" (click)="isActive = '1'" href="#"><img src="https://cdn.winwholesale.com/default/img/logo-white.png" width="100px"></a>
+      </div>
+    </div>
+
+    <div class="table-row">
+
+      <div class="side-nav-panel">
+          <a id="panel-manifest" (click)="toggleShipManMenu()" class="parentLinks">Shipping Manifests</a>
+          <ul id="openManifest" class="childLinks" (click)="closeSideNav(true)">
+            <li>
+              <a [ngClass]="{active: isActive=='1'}" (click)="isActive = '1'" href="{{shippingManifestUrl}}#/manifest-dashboard">Today's Summary</a>
+              <i class="arrow fa fa-caret-left fa-2x" *ngIf="isActive === '1'"></i>
+            </li>
+            <li>
+              <a [ngClass]="{active: isActive=='2'}" (click)="isActive = '2'" href="{{shippingManifestUrl}}#/list">Manifests</a>
+              <i class="arrow fa fa-caret-left fa-2x" *ngIf="isActive === '2'"></i>
+            </li>
+            <li>
+              <a [ngClass]="{active: isActive=='3'}" (click)="isActive = '3'" href="{{shippingManifestUrl}}#/not-delivered-order-list">Not Delivered Orders</a>
+              <i class="arrow fa fa-caret-left fa-2x" *ngIf="isActive === '3'"></i>
+            </li>
+            <li>
+              <a [ngClass]="{active: isActive=='4'}" (click)="isActive = '4'" href="{{shippingManifestUrl}}#/delivered-order-list">Delivered Orders</a>
+              <i class="arrow fa fa-caret-left fa-2x" *ngIf="isActive === '4'"></i>
+            </li>
+            <li>
+              <a [ngClass]="{active: isActive=='5'}" (click)="isActive = '5'" href="{{shippingManifestUrl}}#/truck-list">Trucks</a>
+              <i class="arrow fa fa-caret-left fa-2x" *ngIf="isActive === '5'"></i>
+            </li>
+            <li>
+              <a [ngClass]="{active: isActive=='6'}" (click)="isActive = '6'" href="{{shippingManifestUrl}}#/driver-list">Drivers</a>
+              <i class="arrow fa fa-caret-left fa-2x" *ngIf="isActive === '6'"></i>
+            </li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="table-row">
+      <div class="side-nav-panel">
+        <a id="panel-bin-locations" (click)="toggleBinLocationsMenu()" class="parentLinks">Bin Locations</a>
+        <ul id="openBinLocations" class="childLinks" (click)="closeSideNav(true)">
+          <li>
+            <a [ngClass]="{active: isActive=='7'}" (click)="isActive = '7'" href="{{binLocationUrl}}#/itembin-details">Items & Bins</a>
+            <i class="arrow fa fa-caret-left fa-2x" *ngIf="isActive === '7'"></i>
+          </li>
+          <li>
+            <a [ngClass]="{active: isActive=='8'}" (click)="isActive = '8'" href="{{binLocationUrl}}#/zone-details">Zones</a>
+            <i class="arrow fa fa-caret-left fa-2x" *ngIf="isActive === '8'"></i>
+          </li>
+          <li>
+            <a [ngClass]="{active: isActive=='9'}" (click)="isActive = '9'" href="{{binLocationUrl}}#/receiver-document">Receiver Document</a>
+            <i class="arrow fa fa-caret-left fa-2x" *ngIf="isActive === '9'"></i>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="table-row">
+      <div class="side-nav-panel">
+        <a id="panel-picking" (click)="togglePickingMenu()" class="parentLinks">Picking</a>
+        <ul id="openPicking" class="childLinks" (click)="closeSideNav(true)">
+          <li>
+            <a [ngClass]="{active: isActive=='10'}" (click)="isActive = '10'" href="{{pickingUrl}}#/picking-Settings">Settings</a>
+            <i class="arrow fa fa-caret-left fa-2x" *ngIf="isActive === '10'"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="table-row">
+      <div class="side-nav-panel">
+        <a id="panel-picking" (click)="togglePurchasingMenu()" class="parentLinks">Purchasing</a>
+        <ul id="openPurchasing" class="childLinks" (click)="closeSideNav(true)">
+          <li>
+            <a [ngClass]="{active: isActive=='12'}" (click)="isActive = '12'" href="{{purchasingUrl}}#/suggested-order-lander">Suggested Order Lander</a>
+            <i class="arrow fa fa-caret-left fa-2x" *ngIf="isActive === '12'"></i>
+          </li>
+          <li>
+            <a [ngClass]="{active: isActive=='13'}" (click)="isActive = '13'" href="{{purchasingUrl}}#/create-worksheet">Create Worksheet</a>
+            <i class="arrow fa fa-caret-left fa-2x" *ngIf="isActive === '13'"></i>
+          </li>
+          <li>
+            <a [ngClass]="{active: isActive=='14'}" (click)="isActive = '14'" href="{{purchasingUrl}}#/edit-worksheet">Edit Worksheet</a>
+            <i class="arrow fa fa-caret-left fa-2x" *ngIf="isActive === '14'"></i>
+          </li>
+          <li>
+            <a [ngClass]="{active: isActive=='15'}" (click)="isActive = '15'" href="{{purchasingUrl}}#/suggest-order">Suggest Order</a>
+            <i class="arrow fa fa-caret-left fa-2x" *ngIf="isActive === '15'"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+
+    <div class="table-row" *ngIf="logoutBaseUrl">
+      <div class="side-nav-panel">
+        <a id="panel-logout" (click)="logout()" class="parentLinks" href="{{logoutBaseUrl ? logoutBaseUrl + 'pkmslogout?filename=login.html' : ''}}">Logout</a>
+      </div>
+    </div>
+
+    <div class="table-row empty-row">
+      <div class="side-nav-panel"></div>
+    </div>
+  </div>
+</div>

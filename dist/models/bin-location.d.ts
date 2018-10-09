@@ -1,0 +1,31 @@
+export declare class BinLocation {
+    binId: number;
+    binLocation: string;
+    includeQtyInAvail: boolean;
+    tote: boolean;
+    pickFrom: boolean;
+    stagingArea: boolean;
+    receiveInto: boolean;
+    replenishFrom: boolean;
+    replenishInto: boolean;
+    specialHandling: boolean;
+    sellable: boolean;
+    numberOfItems: number;
+    totalOnHandQty: number;
+    totalAvailableQty: number;
+    zoneId: number;
+    zoneName: string;
+    zoneAbbreviation: string;
+    binConditionId: number;
+    binConditionCode: string;
+    binConditionDescription: string;
+    pickingId: number;
+    pickingCode: string;
+    pickingDescription: string;
+    pickViaSource: string;
+    receivingId: number;
+    receivingCode: string;
+    receivingDescription: string;
+    receiveViaSource: string;
+    constructor(binId?: number, binLocation?: string, includeQtyInAvail?: boolean, tote?: boolean, pickFrom?: boolean, stagingArea?: boolean, receiveInto?: boolean, replenishFrom?: boolean, replenishInto?: boolean, specialHandling?: boolean, sellable?: boolean, numberOfItems?: number, totalOnHandQty?: number, totalAvailableQty?: number, zoneId?: number, zoneName?: string, zoneAbbreviation?: string, binConditionId?: number, binConditionCode?: string, binConditionDescription?: string, pickingId?: number, pickingCode?: string, pickingDescription?: string, pickViaSource?: string, receivingId?: number, receivingCode?: string, receivingDescription?: string, receiveViaSource?: string);
+}

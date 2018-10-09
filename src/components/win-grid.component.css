@@ -1,0 +1,7 @@
+#grid-canvas {
+    background: #FFFFFF;
+}
+
+#grid-canvas:focus {
+    outline: none;
+}

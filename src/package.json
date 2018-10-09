@@ -1,0 +1,22 @@
+{
+  "name": "w2020-shared-library",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/winsupplyinc/w2020-shared-library"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/winsupplyinc/w2020-shared-library/issues"
+  },
+  "module": "w2020-shared-library.js",
+  "typings": "w2020-shared-library.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}

@@ -1,0 +1,27 @@
+.chips {
+  position: absolute;
+  top: 53px;
+  right: 0;
+}
+
+.chips .chip {
+  padding: 2px 5px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 1px;
+  border-radius: 5px;
+  display: inline;
+  margin-right: 5px;
+  font-size: 10px;
+}
+
+.chips .red {
+  color: #CC0000;
+}
+
+.chips .clickable {
+  cursor: pointer;
+}
+
+.chips .primary-color {
+  color: #0072CF;
+}

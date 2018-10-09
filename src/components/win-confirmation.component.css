@@ -1,0 +1,108 @@
+.win-confirmation-modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1051;
+    display: none;
+}
+
+.win-confirmation-modal-content {
+    width: 100%;
+    height: 100%;
+}
+
+.win-confirmation-modal-dialog-content {
+    width: 70%;
+}
+
+.win-confirmation-modal-body {
+    width: 100%;
+    height: auto;
+    max-width: 560px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.win-confirmation-title {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.win-confirmation-text {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.win-confirmation-btn-blue, .win-confirmation-btn-white {
+    width: 35%;
+    max-width: 180px;
+    min-height: 50px;
+    margin: 5%;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    border: 2px solid #0072cf;
+    text-wrap: normal;
+}
+
+.win-confirmation-btn-blue {
+    background-color: #0072cf;
+    color: #ffffff;
+    float: right;
+}
+
+.win-confirmation-btn-blue:hover {
+    background-color: #0064B6;
+}
+
+.win-confirmation-btn-white {
+    background-color: #ffffff;
+    color: #0072cf;
+    float: left;
+}
+
+.win-confirmation-btn-white:hover {
+    background-color: #ffffff;
+    border-color: #0064b6;
+    color: #0064b6;
+}
+
+.win-confirmation-btn-white:active {
+    background-color: #ffffff;
+    border-color: #0064b6;
+    color: #0064b6;
+}
+
+.win-confirmation-btn-blue:hover {
+    background-color: #00569c;
+    border-color: #00569c;
+    color: #ffffff;
+}
+
+.win-confirmation-btn-blue:active {
+    background-color: #00569c;
+    border-color: #00569c;
+    color: #ffffff;
+}
+
+.win-confirmation-wrapper {
+    text-align: center;
+}
+
+.win-confirmation-icon {
+    height: 100px;
+    display: inline-block;
+    font-size: 100px;
+}
+
+.win-confirmation-modal .modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

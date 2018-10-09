@@ -1,0 +1,60 @@
+.win-dropdown {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+.dark .win-dropdown {
+  background-color: #181818;
+}
+
+.win-dropdown .win-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 99%;
+  left: 0;
+  right: 0;
+  list-style: none;
+  overflow: auto;
+  z-index: 9999;
+  max-height: 150px;
+
+}
+.win-dropdown .win-dropdown-menu li {
+  padding: 0.4rem;
+  cursor: pointer;
+}
+.win-dropdown .win-dropdown-menu li:hover {
+  background-color: #0072CF;
+}
+
+.light .win-dropdown .win-dropdown-menu li:hover {
+  color: #FFFFFF;
+}
+
+.win-dropdown.active .win-dropdown-menu {
+  display: block;
+  border: 1px solid #cccccc;
+  background-color: #FFFFFF;
+}
+
+.dark .win-dropdown.active .win-dropdown-menu {
+  background-color: #181818;
+}
+
+.win-dropdown input[readonly]:not(:disabled) {
+  background-color: inherit;
+}
+
+/* Caret sign */
+.win-dropdown .select span {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #A8A9A6;
+}
+
+.win-dropdown.active .select span {
+  transform: translateY(-50%) rotate(180deg);
+}

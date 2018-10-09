@@ -1,0 +1,5 @@
+<div class="input-group win-input">
+    <div class="bootstrap-timepicker timepicker">
+        <input id="{{id}}" type="text" class="form-control" [ngModel]="model.time" (ngModelChange)="change($event)" (focus)="initializeTimepicker(model, onChange, onTouched, initialValue)" (keydown)="clearTimepicker($event)"/>
+    </div>
+</div>

@@ -1,0 +1,3 @@
+<div class="input-group win-input">
+    <input (keyup)="callvalidate($event)" [id]="id" [readonly]="readonly" [disabled]="disabled" [required]="required" type="text" class="form-control" name="date" [ngModel]="date" (ngModelChange)="change($event)" (focus)="initializeDatepicker()" placeholder="mm/dd/yyyy"/>
+</div>

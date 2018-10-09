@@ -1,0 +1,8 @@
+.datepicker table tr td.active:active, .datepicker table tr td.active.highlighted:active, .datepicker table tr td.active.active, .datepicker table tr td.active.highlighted.active {
+    background-color: #0072cf;
+}
+
+.datepicker table tr td.disabled, .datepicker table tr td.disabled:hover {
+    cursor: not-allowed;
+    color: #E0E0E0;
+}

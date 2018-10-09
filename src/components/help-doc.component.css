@@ -1,0 +1,27 @@
+
+.help-icon {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.help-icon:hover,
+.help-icon:focus {
+    color: #0072CF;
+    text-decoration: none;
+    outline: none;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .help-icon {
+        vertical-align: top;
+        margin-top: 2px;
+    }
+}
+
+@media only screen and (max-width: 767px), (max-device-width: 1024px) and (min-device-width: 768px) {
+    .help-icon {
+        vertical-align: unset;
+        margin-top: 0;
+    }
+}

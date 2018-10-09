@@ -1,0 +1,247 @@
+
+tr:nth-child(even) td {
+  background-color: #181818;
+}
+
+.win-pagination.priority {
+  background-color: #181818;
+}
+
+.manifest-action-btn {
+  color: #31acff;
+  background-color: #000;
+  border: 1px solid #31acff;
+}
+
+.new-manifest-btn {
+  border-radius: 25px;
+  border: 1px solid #31acff;
+  color: #A8A9A6;
+  background: #000;
+  padding: 4px 12px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 17px;
+  display: inline-block;
+  margin-bottom: 0;
+  white-space: nowrap;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.img.desktop-logo {
+  background-image: url(https://cdn.winwholesale.com/default/img/logo-white.svg);
+  background-repeat: no-repeat;
+  display: block;
+  width: 100px;
+  height: 20px;
+  background-size: 100px 20px;
+}
+
+.modal-content {
+  background-color: #181818 !important;
+}
+
+.order-header {
+  background-color: #181818 !important;
+}
+
+.btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:focus, fieldset[disabled] {
+  background-color: #31acff;
+  border: 1px solid #31acff;
+}
+
+.btn-primary:hover, .btn-primary.disabled:hover {
+  background-color: #0097fd;
+  border: 1px solid #0097fd;
+}
+
+.delete-manifest-btn:hover {
+  color: #0088e4;
+  border: 1px solid #0088e4;
+}
+
+.delete-manifest-btn {
+  background-color: #000
+}
+
+h2, .win-responsive-table th a {
+  color: inherit;
+}
+
+.switch-on {
+  color: #181818 !important;
+  font-size: 10px;
+  left: 44px;
+  top: 3px;
+}
+
+.switch-off {
+  top: 3px;
+  left: 40px;
+  position: absolute;
+  font-size: 10px;
+  color: #31acff;
+  margin-left: 10px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #181818;
+  border-radius: 4px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border: 1px solid #31acff;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 34px;
+  left: 1px;
+  bottom: 1px;
+  background-color: #181818;
+  border-radius: 4px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border: 1px solid #31acff;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.25);
+}
+
+.slider:after {
+  content: "OFF";
+  position: absolute;
+  top: 3px;
+  left: 44px;
+  font-size: 10px;
+  color: #31acff;
+}
+
+input:checked + .slider {
+  background-color: #31acff;
+  border: 1px solid #31acff;
+}
+
+input:checked + .slider:after {
+  color: #181818;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  font-size: 10px;
+}
+
+.win-confirmation-modal-body {
+  background-color: #181818;
+}
+
+.win-confirmation-btn-white {
+  background-color: #181818;
+}
+
+.win-confirmation-btn-white:hover {
+  background-color: #181818;
+  border: 1px solid #0088e4;
+}
+
+.ndo-action-btn {
+  background-color: #181818;
+}
+
+.mobile-manifest-action-btn, .panel-heading, .inquiry-order-body, .inquiry-order-header, .packing-list .panel-heading {
+  background-color: #181818;
+}
+
+.dashboard-title {
+  color: #A8A9A6;
+}
+
+.stop-header {
+  background: #333;
+}
+
+.add-to-manifest-table tbody tr:nth-child(odd) td {
+  background-color: #333;
+}
+
+.datepicker-dropdown {
+  background-color: #181818;
+}
+
+.bootstrap-timepicker-widget.dropdown-menu.open, .bootstrap-timepicker-widget table td input, .bootstrap-timepicker-widget table td a:hover {
+  background-color: #181818;
+  border: 1px solid #333;
+}
+
+.ui-datatable .ui-datatable-thead > tr > th {
+  background-color: #181818;
+  color: #A8A9A6;
+}
+
+tr:nth-child(odd) td {
+  background-color: #222222;
+  color: #A8A9A6;
+}
+
+.ui-column-title {
+  color: #A8A9A6;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.ui-widget-content {
+  border: 1px solid #D5D5D5;
+  background: #ffffff;
+  color: #a8a9a6;
+}
+
+.ui-datatable .ui-datatable-thead > tr > th, .ui-datatable .ui-datatable-tfoot > tr > td, .ui-datatable .ui-datatable-data > tr > td {
+  border-color: #333333;
+  width: 100%;
+  text-align: center;
+}
+
+.ui-paginator .ui-paginator-page.ui-state-active {
+  border: 1px solid #333;
+  color: #31acff;
+  background-color: #181818;
+}
+
+.ui-paginator .ui-paginator-page, .ui-paginator .ui-paginator-pages, .ui-paginator .ui-paginator-next, .ui-paginator .ui-paginator-last, .ui-paginator .ui-paginator-first, .ui-paginator .ui-paginator-prev, .ui-paginator .ui-paginator-current {
+  border: 1px solid #333;
+  color: #31acff;
+  background-color: #181818;
+}
+
+.details-heading {
+  color: #A8A9A6;
+}
+
+.ui-widget-header {
+  background: linear-gradient(to bottom, #181818 0%, #181818 100%);
+  border: 1px solid #333
+}
+
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}

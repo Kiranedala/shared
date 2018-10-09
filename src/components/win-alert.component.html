@@ -1,0 +1,6 @@
+<div *ngIf="isRendered" [class]="getAlertClass()" [class.fadeIn]="isVisible"
+     [class.fadeOut]="!isVisible">
+    <span style="float: right"><button class="win-close" (click)="close()">&times;</button></span>
+    <i [class]="getIconClass()" aria-hidden="true"> <span>&nbsp;&nbsp;&nbsp;</span></i>
+    {{message}}
+</div>

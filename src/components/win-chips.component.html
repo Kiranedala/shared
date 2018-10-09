@@ -1,0 +1,9 @@
+<div class="chips">
+  <div class="chip" *ngFor="let chip of list | slice: 0: limit; let i=index">
+    <span>{{chip.label}}</span>
+    <i class="fa fa-times red clickable" (click)="delete(chip.name)"></i>
+  </div>
+  <div class="chip clickable" *ngIf="list.length > limit" (click)="showAllChips()">
+    <strong>See <span class="red">{{list.length - 3}}</span> More <i class="fa fa-angle-double-right primary-dark-color"></i></strong>
+  </div>
+</div>

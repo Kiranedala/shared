@@ -1,0 +1,15 @@
+.win-sorter-parent {
+  display: table;
+  width: 95%;
+}
+
+.win-sorter-text {
+  display: table-cell;
+  text-align: center;
+}
+
+.win-sorter-icon {
+  display: table-cell;
+  vertical-align: middle;
+  color: #0072CF;
+}

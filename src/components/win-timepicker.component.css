@@ -1,0 +1,8 @@
+.bootstrap-timepicker-widget.dropdown-menu.open {
+    display: inline-block;
+    z-index: 99999 !important;
+}
+
+.bootstrap-timepicker-widget table td {
+    border: none;
+}

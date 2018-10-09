@@ -1,0 +1,32 @@
+export declare class BinItemLocation {
+    zoneId: number;
+    zoneAbbreviation: string;
+    zoneName: string;
+    binId: number;
+    binLocation: string;
+    sellable: boolean;
+    tote: boolean;
+    productConditionId: number;
+    productConditionDescription: string;
+    binItemId: number;
+    itemNumber: string;
+    binItemMin: number;
+    binItemMax: number;
+    binQtyOnHand: number;
+    binTypeId: number;
+    binTypeDescription: string;
+    itemDescription1: string;
+    itemDescription2: string;
+    manufacturerCode: string;
+    manufacturerDescription: string;
+    productCode: string;
+    productDescription: string;
+    vendorCode: string;
+    vendorDescription: string;
+    onHandItemBalance: number;
+    iov: boolean;
+    numberOfItems: number;
+    onHandBinTotal: number;
+    numberOfBins: number;
+    constructor(zoneId?: number, zoneAbbreviation?: string, zoneName?: string, binId?: number, binLocation?: string, sellable?: boolean, tote?: boolean, productConditionId?: number, productConditionDescription?: string, binItemId?: number, itemNumber?: string, binItemMin?: number, binItemMax?: number, binQtyOnHand?: number, binTypeId?: number, binTypeDescription?: string, itemDescription1?: string, itemDescription2?: string, manufacturerCode?: string, manufacturerDescription?: string, productCode?: string, productDescription?: string, vendorCode?: string, vendorDescription?: string, onHandItemBalance?: number, iov?: boolean, numberOfItems?: number, onHandBinTotal?: number, numberOfBins?: number);
+}

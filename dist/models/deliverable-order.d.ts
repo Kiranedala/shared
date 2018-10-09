@@ -1,0 +1,35 @@
+import { Address } from './address';
+import { DeliverableOrderItem } from './deliverable-order-item';
+import { DeliverableOrderStatus } from './deliverable-order-status';
+import { DeliverableOrderPhoto } from './deliverable-order-photo';
+import { Signature } from './signature';
+export declare class DeliverableOrder {
+    id: string;
+    stopId: string;
+    companyNumber: string;
+    orderNumber: string;
+    customersPO: string;
+    notes: string;
+    shippingInstructions: string;
+    paymentMethod: string;
+    jobName: string;
+    soldToCustomerNumber: string;
+    shipToCustomerNumber: string;
+    requestedDate: string;
+    orderedDate: string;
+    deliveryAddress: Address;
+    soldToAddress: Address;
+    items: DeliverableOrderItem[];
+    status: DeliverableOrderStatus;
+    shipmentId: string;
+    balanceDue: string;
+    orderedBy: string;
+    countOfSerials: number;
+    lockedIn: boolean;
+    isCollapsed: boolean;
+    photos: DeliverableOrderPhoto[];
+    customerName: string;
+    signature: Signature;
+    adjustedBalanceDue: string;
+    constructor(id: string, stopId: string, companyNumber: string, orderNumber: string, customersPO: string, notes: string, shippingInstructions: string, paymentMethod: string, jobName: string, soldToCustomerNumber: string, shipToCustomerNumber: string, requestedDate: string, orderedDate: string, deliveryAddress: Address, soldToAddress: Address, items: DeliverableOrderItem[], status: DeliverableOrderStatus, shipmentId: string, balanceDue: string, orderedBy: string, countOfSerials: number, lockedIn?: boolean, isCollapsed?: boolean, photos?: DeliverableOrderPhoto[], customerName?: string, signature?: Signature, adjustedBalanceDue?: string);
+}
